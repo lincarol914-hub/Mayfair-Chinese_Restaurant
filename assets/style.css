@@ -397,15 +397,19 @@ body.is-en .dish .en-n::after { content: " · "; color: var(--ink-soft); font-we
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .mini-cards { grid-template-columns: repeat(2, 1fr); }
 
-  .nav { flex-wrap: wrap; gap: 14px; }
-  .nav-links { order: 5; width: 100%; flex-direction: column; margin: 0; display: none; padding: 8px 0; }
+  /* 单行排布：餐厅名 ···· 语言切换 折叠键，全部同一行靠右，放不下则缩小 */
+  .nav { flex-wrap: nowrap; gap: 10px; padding: 14px 18px; }
+  .nav-links { order: 5; width: 100%; flex-direction: column; margin: 0; display: none; padding: 8px 0; flex-basis: 100%; }
   .nav-links.open { display: flex; }
   .nav-links a { text-align: center; }
   .nav-links a::after { display: none; }
   /* top bar keeps only brand + language toggle + hamburger */
-  .brand { margin-right: auto; }
+  .brand { margin-right: auto; min-width: 0; overflow: hidden; }
+  .brand .brand-mark { white-space: nowrap; }
+  .brand .brand-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .nav-phone { display: none; }
-  .nav-toggle { display: inline-grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line-2); background: transparent; color: var(--ink); border-radius: 0; cursor: pointer; font-size: 20px; order: 4; }
+  .lang-toggle { flex: 0 0 auto; }
+  .nav-toggle { display: inline-grid; place-items: center; width: 42px; height: 42px; flex: 0 0 auto; border: 1px solid var(--line-2); background: transparent; color: var(--ink); border-radius: 0; cursor: pointer; font-size: 20px; order: 4; }
   /* phone + reserve moved into the collapsed menu */
   .nav-book { display: none; }
   .nav-links .phone-mobile { display: block; width: 100%; }
@@ -422,4 +426,14 @@ body.is-en .dish .en-n::after { content: " · "; color: var(--ink-soft); font-we
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { text-align: center; }
   .cta-band .wrap { flex-direction: column; text-align: center; }
+  /* 窄屏顶栏：整体缩小，确保单行放下 */
+  .nav { gap: 8px; padding: 12px 14px; }
+  .brand .brand-mark { font-size: 19px; letter-spacing: .06em; }
+  .brand .brand-sub { font-size: 9px; letter-spacing: .14em; }
+  .lang-toggle { min-width: 0; height: 34px; padding: 0 10px; font-size: 10.5px; letter-spacing: .12em; }
+  .nav-toggle { width: 36px; height: 36px; font-size: 18px; }
+}
+@media (max-width: 380px) {
+  .brand .brand-sub { display: none; }
+  .brand .brand-mark { font-size: 17px; }
 }

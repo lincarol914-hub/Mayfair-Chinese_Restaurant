@@ -63,6 +63,12 @@ img { max-width: 100%; display: block; }
 /* hairline label */
 .kicker, .seal-inline { font-family: var(--sans); font-weight: 400; letter-spacing: .34em; text-transform: uppercase; font-size: 12px; color: var(--bronze); }
 
+/* line icons */
+.svg-ico { display: inline-block; vertical-align: middle; }
+.feat .ico { color: var(--accent); }
+.nav-phone .ph-i { display: inline-flex; }
+.socials i svg { display: block; }
+
 /* ---- 去除古风装饰：全部隐藏 ---- */
 .plum, .pavilion, .hero-seal, .cloud-div,
 .cornered::before, .cornered::after,
@@ -176,7 +182,7 @@ section { padding: 112px 0; position: relative; }
 .feature-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 64px; background: var(--line); border: 1px solid var(--line); }
 .feat { background: var(--bg); border: 0; border-radius: 0; padding: 40px 30px; text-align: center; box-shadow: none; transition: background .3s; }
 .feat:hover { background: var(--bg-2); transform: none; }
-.feat .ico { width: auto; height: auto; margin: 0 auto 18px; border: 0; background: none; border-radius: 0; font-size: 30px; display: block; }
+.feat .ico { width: auto; height: auto; margin: 0 auto 20px; border: 0; background: none; border-radius: 0; display: flex; justify-content: center; color: var(--accent); }
 .feat h3 { font-family: var(--zh); font-weight: 600; letter-spacing: .06em; font-size: 19px; margin: 0 0 8px; color: var(--ink); }
 .feat p { margin: 0; color: var(--ink-soft); font-weight: 300; font-size: 14px; }
 
@@ -322,14 +328,15 @@ section { padding: 112px 0; position: relative; }
 
 .info-strip { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 0; overflow: hidden; background: var(--line); gap: 1px; box-shadow: none; }
 .info-strip .cell { padding: 40px 24px; text-align: center; border: 0; background: var(--bg); }
-.info-strip .cell .ico { font-size: 24px; color: var(--accent); }
+.info-strip .cell .ico { color: var(--accent); display: flex; justify-content: center; }
 .info-strip .cell h4 { font-family: var(--zh); font-weight: 600; letter-spacing: .05em; margin: 12px 0 8px; font-size: 19px; color: var(--ink); }
 .info-strip .cell p { margin: 0; color: var(--ink-soft); font-weight: 300; font-size: 15px; }
 
 .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; max-width: 940px; margin: 0 auto; background: var(--line); border: 1px solid var(--line); }
 .contact-card { background: var(--bg); border: 0; border-radius: 0; padding: 44px 40px; box-shadow: none; transition: background .3s; }
 .contact-card:hover { background: var(--bg-2); transform: none; }
-.contact-card .ico { font-size: 26px; color: var(--accent); }
+.contact-card .ico { color: var(--accent); }
+.contact-card .ico .svg-ico, .info-strip .cell .ico .svg-ico { display: block; }
 .contact-card h3 { font-family: var(--zh); font-weight: 600; letter-spacing: .05em; margin: 14px 0 14px; font-size: 23px; color: var(--ink); }
 .contact-card p { font-family: var(--sans); font-weight: 300; font-size: 16px; color: var(--ink-soft); margin: 4px 0; }
 .contact-card a { color: var(--ink); font-weight: 400; }

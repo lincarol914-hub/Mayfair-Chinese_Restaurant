@@ -53,4 +53,22 @@
       reveals.forEach(function (el) { el.classList.add("in"); });
     }
   }
+
+  // 图片查看 / lightbox — works on any page with [data-img] triggers
+  var lb = document.getElementById("lightbox");
+  if (lb) {
+    var lbImg = lb.querySelector("#lb-img");
+    var lbCap = lb.querySelector("#lb-cap");
+    var openLb = function (src, cap) {
+      lbImg.src = src; lbImg.alt = cap || ""; lbCap.textContent = cap || "";
+      lb.classList.add("open"); document.body.style.overflow = "hidden";
+    };
+    var closeLb = function () { lb.classList.remove("open"); lbImg.src = ""; document.body.style.overflow = ""; };
+    document.addEventListener("click", function (e) {
+      var trig = e.target.closest("[data-img]");
+      if (trig) { openLb(trig.getAttribute("data-img"), trig.getAttribute("data-cap")); return; }
+      if (e.target.closest(".lb-close") || e.target === lb) closeLb();
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
+  }
 })();

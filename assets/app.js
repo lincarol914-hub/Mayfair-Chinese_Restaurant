@@ -38,4 +38,19 @@
       if (nl) nl.classList.remove("open");
     }
   });
+
+  // 滚动渐显 / reveal on scroll
+  var reveals = document.querySelectorAll(".reveal");
+  if (reveals.length) {
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add("in"); });
+    }
+  }
 })();

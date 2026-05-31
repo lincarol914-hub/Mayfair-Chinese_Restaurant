@@ -8,14 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css?v=2" />
+  <link rel="stylesheet" href="assets/style.css?v=3" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a class="brand" href="index.html">
-        <span class="seal">美</span>
-        <span class="name"><b>美味庄园</b><span>Mayfair Chinese</span></span>
+        <span class="brand-mark">美味庄园</span>
+        <span class="brand-sub">Mayfair Chinese</span>
       </a>
       <ul class="nav-links">
         <li><a href="index.html"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a></li>
@@ -23,7 +23,9 @@
         <li><a href="map.html"><span class="lang-zh">地图</span><span class="lang-en">Map</span></a></li>
         <li><a href="contact.html"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a></li>
       </ul>
+      <a class="nav-phone" href="tel:+447455021149"><span class="ph">☎</span> 07455 021149</a>
       <button class="lang-toggle" type="button">EN</button>
+      <a class="btn btn-solid nav-book" href="contact.html"><span class="lang-zh">立即预订</span><span class="lang-en">Reserve</span></a>
       <button class="nav-toggle" type="button" aria-label="菜单 Menu">☰</button>
     </nav>
   </header>
@@ -231,7 +233,7 @@
         <div class="buffet">
           <p class="sub-h" style="margin-top:0;"><span class="lang-zh">自助火锅 + 烤肉</span><span class="lang-en">Hot Pot &amp; Barbecue Buffet</span></p>
           <p class="price-big">£30.00 <span style="font-size:14px;"><span class="lang-zh">/ 每位（至少两位起）</span><span class="lang-en">per person (min. 2)</span></span></p>
-          <p style="color:var(--ink-soft);margin:8px 0 0;">
+          <p style="color:var(--text-dim);margin:8px 0 0;">
             <span class="lang-zh">自选锅底，肉类、海鲜、豆腐、蔬菜任点。含麻辣香锅、麻辣拌、冒菜（四样起）。锅底：鸳鸯锅（一辣一清）/ 滋补清汤锅 / 麻辣香锅 / 麻辣拌 / 冒菜。</span>
             <span class="lang-en">Choose your broth; unlimited meats, seafood, tofu &amp; vegetables. Includes spicy stir-fry pot, spicy salad &amp; mao cai (min. 4 items). Broths: split spicy/clear · nourishing clear · spicy stir-fry · spicy salad · mao cai.</span>
           </p>
@@ -261,13 +263,28 @@
   </section>
 
   <footer class="site-footer">
-    <div class="seal">美味庄园</div>
-    <p class="f-info">Mayfair Chinese Restaurant</p>
-    <p class="f-info">2A, Guildhall Square, Portsmouth PO1 2DB</p>
-    <p class="f-info"><span class="lang-zh">电话 </span><span class="lang-en">Tel </span><a href="tel:+447455021149">07455 021149</a></p>
-    <p class="copy">© MMXXVI Mayfair Restaurant Ltd. · <span class="lang-zh">版权所有</span><span class="lang-en">All rights reserved</span></p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-mark">美味庄园</div>
+        <div class="brand-sub">Mayfair Chinese Restaurant</div>
+        <div class="tagline"><span class="lang-zh">川味为骨 · 粤韵为魂</span><span class="lang-en">Sichuan Fire · Cantonese Soul</span></div>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-zh">联系我们</span><span class="lang-en">Contact</span></h4>
+        <p><span class="lang-zh">地址 · </span>2A, Guildhall Square,</p>
+        <p>Portsmouth PO1 2DB</p>
+        <p><span class="lang-zh">电话 · </span><a href="tel:+447455021149">07455 021149</a></p>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-zh">营业时间</span><span class="lang-en">Opening Hours</span></h4>
+        <p><span class="lang-zh">周一至周五</span><span class="lang-en">Mon – Fri</span> · 11:30 – 21:30</p>
+        <p><span class="lang-zh">周六</span><span class="lang-en">Saturday</span> · 12:00 – 22:00</p>
+        <p><span class="lang-zh">周日 · 敬请致电</span><span class="lang-en">Sunday · please call</span></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© MMXXVI Mayfair Restaurant Ltd. · <span class="lang-zh">版权所有</span><span class="lang-en">All rights reserved</span></div>
   </footer>
 
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js?v=3"></script>
 </body>
 </html>

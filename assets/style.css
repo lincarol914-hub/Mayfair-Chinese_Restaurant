@@ -125,6 +125,7 @@ img { max-width: 100%; display: block; }
 .btn-ghost-light:hover { background: #fff; color: var(--ink); border-color: #fff; }
 .btn-sm { padding: 12px 26px; font-size: 11.5px; }
 .nav-book { display: inline-flex; align-items: center; justify-content: center; min-width: 92px; height: 38px; padding: 0 22px; font-size: 11.5px; line-height: 1; }
+.reserve-mobile { display: none; }
 .nav-toggle { display: none; }
 
 /* ============================================================
@@ -394,6 +395,10 @@ section { padding: 112px 0; position: relative; }
   .nav-links a::after { display: none; }
   .nav-phone { margin-left: auto; }
   .nav-toggle { display: inline-grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line-2); background: transparent; color: var(--ink); border-radius: 0; cursor: pointer; font-size: 20px; order: 4; }
+  /* move Reserve button into the collapsed menu on mobile */
+  .nav-book { display: none; }
+  .nav-links .reserve-mobile { display: block; width: 100%; margin-top: 8px; }
+  .nav-links .reserve-mobile .nav-book { display: flex; width: 100%; height: 46px; }
 }
 @media (max-width: 560px) {
   .dish-cards { grid-template-columns: 1fr 1fr; }

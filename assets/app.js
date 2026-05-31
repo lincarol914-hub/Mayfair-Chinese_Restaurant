@@ -54,6 +54,15 @@
     }
   }
 
+  // 跨页锚点定位（如 menu.html#hotpot）：等布局/图片就绪后再滚到位
+  if (window.location.hash) {
+    var jump = function () {
+      var el = document.getElementById(window.location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: "start" });
+    };
+    window.addEventListener("load", function () { setTimeout(jump, 60); });
+  }
+
   // 图片查看 / lightbox — works on any page with [data-img] triggers
   var lb = document.getElementById("lightbox");
   if (lb) {

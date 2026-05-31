@@ -176,7 +176,7 @@ section { padding: 78px 0; position: relative; }
 .feature-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 46px; }
 .feat { background: var(--paper); border: 1px solid var(--gold-line); border-radius: 6px; padding: 26px 22px; text-align: center; box-shadow: 0 6px 16px rgba(70,58,45,.05); transition: transform .25s, box-shadow .25s, border-color .25s; }
 .feat:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: var(--shadow); }
-.feat .ico { width: 56px; height: 56px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; font-size: 26px; background: var(--cream); border: 1px solid var(--gold-line); }
+.feat .ico { width: 56px; height: 56px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; font-size: 26px; background: var(--cream); border: 1px solid var(--gold-line); position: relative; }
 .feat h3 { font-family: var(--serif); font-weight: 700; letter-spacing: 2px; font-size: 19px; margin: 0 0 6px; color: var(--red); }
 .feat p { margin: 0; color: var(--ink-soft); font-size: 14px; }
 
@@ -325,6 +325,80 @@ section { padding: 78px 0; position: relative; }
 .hours-table { width: 100%; border-collapse: collapse; }
 .hours-table td { padding: 10px 0; border-bottom: 1px dotted var(--line); }
 .hours-table td:last-child { text-align: right; color: var(--ink); font-family: var(--en); font-size: 16px; }
+
+/* ============================================================
+   古风装饰元素 Decorative elements
+   云纹 · 印章 · 卷轴 · 牌匾 · 玉璧 · 纹样 · 梅花 · 亭台 · 底纹
+   ============================================================ */
+
+/* 祥云分隔线 cloud divider */
+.cloud-div { height: 26px; margin: 16px auto 0; max-width: 300px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='26' viewBox='0 0 160 26'><g fill='none' stroke='%23c19a47' stroke-width='1.3'><path d='M30 13 H130'/><path d='M44 13 a6 6 0 1 1 6 -6 a3.4 3.4 0 1 0 -3.4 3.4'/><path d='M116 13 a6 6 0 1 0 -6 -6 a3.4 3.4 0 1 1 3.4 3.4'/></g><path d='M80 7 L84 13 L80 19 L76 13 Z' fill='%23a22d21'/></svg>") no-repeat center; }
+
+/* 卷轴标题 scroll header */
+.scroll-title { position: relative; display: inline-block; padding: 13px 34px 11px; margin: 0 14px;
+  background: linear-gradient(180deg, #fbf6ee, #f3e7d4);
+  border-top: 2px solid var(--gold-line); border-bottom: 2px solid var(--gold-line);
+  box-shadow: inset 0 0 0 1px rgba(193,154,71,.22); }
+.scroll-title::before, .scroll-title::after { content: ""; position: absolute; top: -7px; bottom: -7px; width: 15px;
+  background: linear-gradient(90deg, #ab8a4f, #e7d4a4 45%, #ab8a4f); border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(70,58,45,.3); }
+.scroll-title::before { left: -11px; }
+.scroll-title::after { right: -11px; }
+.scroll-title .zh { display: block; font-family: var(--cal); font-size: 34px; letter-spacing: 5px; color: var(--ink); line-height: 1.1; }
+.scroll-title .en { display: block; font-family: var(--en); font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-deep); }
+
+/* 版块标题牌 red plaque */
+.plaque { position: relative; display: inline-block; padding: 12px 42px 10px;
+  background: linear-gradient(180deg, var(--red-2), var(--red-d)); border-radius: 4px;
+  border: 1px solid var(--gold-soft); box-shadow: inset 0 0 0 4px var(--red-d), 0 6px 16px rgba(120,26,18,.25); }
+.plaque::before { content: ""; position: absolute; inset: 4px; border: 1px solid var(--gold-soft); border-radius: 2px; pointer-events: none; }
+.plaque .zh { display: block; font-family: var(--cal); font-size: 30px; letter-spacing: 5px; color: var(--cream); line-height: 1.1; }
+.plaque .en { display: block; font-family: var(--en); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-soft); }
+
+/* 方印 square seal */
+.seal-sq { display: inline-grid; place-items: center; width: 56px; height: 56px; padding: 6px;
+  background: var(--red); color: var(--cream); font-family: var(--cal); font-size: 16px; line-height: 1.05;
+  border-radius: 3px; box-shadow: inset 0 0 0 1px rgba(243,231,212,.55); text-align: center; }
+
+/* 标签徽章 badges */
+.badge { display: inline-block; font-family: var(--serif); font-size: 12px; letter-spacing: 1px; padding: 3px 10px; border-radius: 3px; border: 1px solid transparent; }
+.badge-red { background: var(--red); color: var(--cream); }
+.badge-jade { background: var(--jade); color: var(--cream); }
+.badge-gold { background: var(--cream); color: #6a4f1c; border-color: var(--gold); }
+.badge-line { background: rgba(251,246,238,.9); color: var(--red); border-color: var(--red); }
+.dish-card__img .badge { position: absolute; top: 8px; left: 8px; z-index: 3; box-shadow: 0 2px 6px rgba(0,0,0,.2); }
+
+/* 主厨推荐 chef ribbon */
+.chef-pick { display: inline-flex; align-items: center; gap: 8px; font-family: var(--cal); font-size: 18px; letter-spacing: 3px; color: #6a4f1c;
+  background: linear-gradient(180deg, #f6eddd, #ecdcbd); border: 1px solid var(--gold); border-radius: 4px; padding: 5px 22px; }
+.chef-pick::before, .chef-pick::after { content: "❖"; color: var(--red); font-size: 11px; }
+
+/* 玉璧 / 图标容器 lattice ring */
+.ico-ring::after { content: ""; position: absolute; inset: -7px; border-radius: 50%; pointer-events: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><circle cx='40' cy='40' r='38' fill='none' stroke='%23c19a47' stroke-width='1' stroke-dasharray='1.5 4.5'/></svg>") center/contain no-repeat; }
+
+/* 装饰边角 corner ornaments */
+.cornered::before, .cornered::after { content: ""; position: absolute; width: 24px; height: 24px; pointer-events: none; z-index: 2;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' stroke='%23c19a47' stroke-width='1.3'><path d='M2 12 V2 H12'/><path d='M6 12 V6 H12'/></g></svg>") no-repeat; }
+.cornered::before { top: 8px; left: 8px; }
+.cornered::after { bottom: 8px; right: 8px; transform: rotate(180deg); }
+
+/* 梅花 plum branch */
+.plum { position: absolute; width: 230px; height: 140px; pointer-events: none; opacity: .9; z-index: 1;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='230' height='140' viewBox='0 0 230 140'><g stroke='%237a6d5d' stroke-width='2.4' fill='none' stroke-linecap='round'><path d='M0 128 Q72 106 116 58 Q148 22 230 8'/><path d='M74 82 Q96 70 122 76'/><path d='M158 34 Q176 41 188 31'/></g><g fill='%23c44d36'><circle cx='118' cy='56' r='5'/><circle cx='128' cy='49' r='4'/><circle cx='107' cy='51' r='4'/><circle cx='158' cy='31' r='5'/><circle cx='170' cy='24' r='4'/><circle cx='188' cy='13' r='5'/><circle cx='201' cy='9' r='3.4'/></g></svg>") no-repeat; background-size: contain; }
+
+/* 亭台楼阁 pavilion */
+.pavilion { position: absolute; width: 150px; height: 110px; pointer-events: none; opacity: .15; z-index: 0;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='110' viewBox='0 0 150 110'><g fill='%23f3e7d4'><path d='M75 12 L132 44 L116 44 Q116 37 75 37 Q34 37 34 44 L18 44 Z'/><path d='M44 47 H106 V92 H44 Z'/><path d='M32 92 H118 V100 H32 Z'/><path d='M70 62 H80 V92 H70 Z'/></g></svg>") no-repeat; background-size: contain; }
+
+/* 底纹肌理 wave texture */
+.tex { position: relative; }
+.tex::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .05; z-index: 0;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='46' height='23' viewBox='0 0 46 23'><path d='M0 23 Q11.5 3 23 23 Q34.5 3 46 23' fill='none' stroke='%237a6d5d' stroke-width='1'/></svg>"); background-size: 46px 23px; }
+.tex > * { position: relative; z-index: 1; }
+
+.site-footer { position: relative; overflow: hidden; }
 
 /* ============================================================
    Responsive

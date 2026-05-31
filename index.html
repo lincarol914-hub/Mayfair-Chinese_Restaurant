@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>美味庄园 · Mayfair Chinese Restaurant</title>
   <meta name="description" content="美味庄园 Mayfair Chinese Restaurant — 朴次茅斯高级中餐 · Authentic Chinese fine dining in Portsmouth." />
-  <link rel="stylesheet" href="assets/style.css?v=3" />
+  <link rel="stylesheet" href="assets/style.css?v=4" />
   <noscript><style>.reveal{opacity:1;transform:none;}</style></noscript>
 </head>
 <body>
+  <!--
+    图片位 IMAGE SLOTS — 想换图就改下面对应 <img> 的 src（任何可商用图均可）。
+    若某张图加载失败，会自动回退到金框书法占位，不会出现破图。
+    1) hero-plate  招牌主图   2-6) dish-card 招牌菜x5   7-9) feature 三栏(菜单/主厨/空间)
+  -->
+
   <!-- ===== Header ===== -->
   <header class="site-header">
     <nav class="nav">
@@ -48,6 +54,9 @@
       </div>
 
       <div class="hero-plate reveal">
+        <img class="cover-img" alt="" loading="lazy"
+             src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&h=900&q=80"
+             onerror="this.style.display='none'">
         <span class="seal-stamp">美膳</span>
         <span class="plate-char">膳</span>
         <span class="plate-note">Signature of the House</span>
@@ -87,7 +96,7 @@
 
       <div class="dish-cards">
         <article class="dish-card reveal">
-          <div class="dish-card__img"><span class="ch">鸭</span></div>
+          <div class="dish-card__img"><img class="cover-img" alt="" loading="lazy" src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=700&h=875&q=80" onerror="this.style.display='none'"><span class="ch">鸭</span></div>
           <div class="dish-card__body">
             <div class="dish-card__name"><span class="lang-zh">香酥鸭（全）</span><span class="lang-en">Crispy Aromatic Duck</span></div>
             <div class="dish-card__en"><span class="lang-zh">Crispy Aromatic Duck</span><span class="lang-en">香酥鸭 · whole</span></div>
@@ -95,7 +104,7 @@
           </div>
         </article>
         <article class="dish-card reveal">
-          <div class="dish-card__img"><span class="ch">鱼</span></div>
+          <div class="dish-card__img"><img class="cover-img" alt="" loading="lazy" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&h=875&q=80" onerror="this.style.display='none'"><span class="ch">鱼</span></div>
           <div class="dish-card__body">
             <div class="dish-card__name"><span class="lang-zh">麻辣烤鲈鱼</span><span class="lang-en">Sichuan Grilled Seabass</span></div>
             <div class="dish-card__en"><span class="lang-zh">Sichuan Grilled Seabass</span><span class="lang-en">麻辣烤鲈鱼</span></div>
@@ -103,7 +112,7 @@
           </div>
         </article>
         <article class="dish-card reveal">
-          <div class="dish-card__img"><span class="ch">肘</span></div>
+          <div class="dish-card__img"><img class="cover-img" alt="" loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&h=875&q=80" onerror="this.style.display='none'"><span class="ch">肘</span></div>
           <div class="dish-card__body">
             <div class="dish-card__name"><span class="lang-zh">脆皮猪肘</span><span class="lang-en">Crispy Pork Hock</span></div>
             <div class="dish-card__en"><span class="lang-zh">Crispy Pork Hock</span><span class="lang-en">脆皮猪肘</span></div>
@@ -111,7 +120,7 @@
           </div>
         </article>
         <article class="dish-card reveal">
-          <div class="dish-card__img"><span class="ch">鲜</span></div>
+          <div class="dish-card__img"><img class="cover-img" alt="" loading="lazy" src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=700&h=875&q=80" onerror="this.style.display='none'"><span class="ch">鲜</span></div>
           <div class="dish-card__body">
             <div class="dish-card__name"><span class="lang-zh">酸菜鱼</span><span class="lang-en">Pickled Cabbage Fish</span></div>
             <div class="dish-card__en"><span class="lang-zh">Pickled Cabbage with Fish</span><span class="lang-en">酸菜鱼</span></div>
@@ -119,7 +128,7 @@
           </div>
         </article>
         <article class="dish-card reveal">
-          <div class="dish-card__img"><span class="ch">虾</span></div>
+          <div class="dish-card__img"><img class="cover-img" alt="" loading="lazy" src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=700&h=875&q=80" onerror="this.style.display='none'"><span class="ch">虾</span></div>
           <div class="dish-card__body">
             <div class="dish-card__name"><span class="lang-zh">干锅香辣虾</span><span class="lang-en">King Prawns Dry Pot</span></div>
             <div class="dish-card__en"><span class="lang-zh">King Prawns in Dry Pot</span><span class="lang-en">干锅香辣虾</span></div>
@@ -139,7 +148,7 @@
     <div class="wrap">
       <div class="feature-grid">
         <article class="feature reveal">
-          <div class="feature__img"><span class="ch">膳</span></div>
+          <div class="feature__img"><img class="cover-img" alt="" loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=500&q=80" onerror="this.style.display='none'"><span class="ch">膳</span></div>
           <div class="feature__body">
             <h3><span class="lang-zh">菜单预览</span><span class="lang-en">The Menu</span></h3>
             <p><span class="lang-zh">时令更迭，臻选当季珍馐，感受庄园四季之美。</span><span class="lang-en">Seasonal ingredients at their peak — taste the year through Mayfair's kitchen.</span></p>
@@ -147,7 +156,7 @@
           </div>
         </article>
         <article class="feature reveal">
-          <div class="feature__img"><span class="ch">匠</span></div>
+          <div class="feature__img"><img class="cover-img" alt="" loading="lazy" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&h=500&q=80" onerror="this.style.display='none'"><span class="ch">匠</span></div>
           <div class="feature__body">
             <h3><span class="lang-zh">主厨故事</span><span class="lang-en">The Kitchen</span></h3>
             <p><span class="lang-zh">传承经典，精益求精；以匠人之心，呈现现点现做的锅气真味。</span><span class="lang-en">Tradition refined — every dish cooked to order, with all the fire and aroma of the wok.</span></p>
@@ -155,7 +164,7 @@
           </div>
         </article>
         <article class="feature reveal">
-          <div class="feature__img"><span class="ch">雅</span></div>
+          <div class="feature__img"><img class="cover-img" alt="" loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&h=500&q=80" onerror="this.style.display='none'"><span class="ch">雅</span></div>
           <div class="feature__body">
             <h3><span class="lang-zh">雅致空间</span><span class="lang-en">The Space</span></h3>
             <p><span class="lang-zh">中式美学，雅致私密，于市政广场畔尊享非凡用餐体验。</span><span class="lang-en">An intimate, oriental-inspired setting beside Guildhall Square for gatherings to remember.</span></p>
@@ -201,6 +210,6 @@
     <div class="footer-bottom">© MMXXVI Mayfair Restaurant Ltd. · <span class="lang-zh">版权所有</span><span class="lang-en">All rights reserved</span></div>
   </footer>
 
-  <script src="assets/app.js?v=3"></script>
+  <script src="assets/app.js?v=4"></script>
 </body>
 </html>

@@ -63,6 +63,22 @@ a:hover { color: var(--gold-bright); }
 img { max-width: 100%; display: block; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 30px; }
 
+/* 照片层 photo layer (falls back to placeholder if it fails to load) */
+.cover-img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: 1; background: #14100b;
+}
+.hero-plate .cover-img { border-radius: 3px; }
+.hero-plate .seal-stamp { z-index: 3; }
+.hero-plate .plate-note { z-index: 3; text-shadow: 0 2px 8px rgba(0,0,0,.8); }
+.hero-plate .plate-char { z-index: 0; }
+.dish-card__img .ch, .feature__img .ch { z-index: 0; }
+/* subtle scrim so overlaid text stays legible on photos */
+.hero-plate::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(180deg, rgba(13,11,8,.10), transparent 30%, transparent 70%, rgba(13,11,8,.55));
+}
+
 /* fade-in on scroll */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s ease, transform .9s ease; }
 .reveal.in { opacity: 1; transform: none; }

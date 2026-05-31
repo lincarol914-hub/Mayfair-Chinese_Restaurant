@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>地图 Map · 美味庄园 Mayfair Chinese Restaurant</title>
+  <meta name="description" content="美味庄园位置 · Find Mayfair Chinese Restaurant at 2A Guildhall Square, Portsmouth PO1 2DB." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <span class="seal">美</span>
+        <span class="name"><b>美味庄园</b><span>Mayfair Chinese</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a></li>
+        <li><a href="menu.html"><span class="lang-zh">菜单</span><span class="lang-en">Menu</span></a></li>
+        <li><a href="map.html" class="active"><span class="lang-zh">地图</span><span class="lang-en">Map</span></a></li>
+        <li><a href="contact.html"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a></li>
+      </ul>
+      <button class="lang-toggle" type="button">EN</button>
+      <button class="nav-toggle" type="button" aria-label="菜单 Menu">☰</button>
+    </nav>
+  </header>
+
+  <section style="padding-top:60px;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Find Us</div>
+        <h2><span class="lang-zh">地 图</span><span class="lang-en">Map &amp; Directions</span></h2>
+        <div class="divider"></div>
+      </div>
+      <p class="menu-intro" style="margin-bottom:32px;">
+        <span class="lang-zh">2A, Guildhall Square, Portsmouth PO1 2DB — 紧邻朴次茅斯市政广场。</span>
+        <span class="lang-en">2A, Guildhall Square, Portsmouth PO1 2DB — right beside Portsmouth's Guildhall Square.</span>
+      </p>
+
+      <div class="map-shell">
+        <iframe
+          title="Mayfair Chinese Restaurant location map"
+          src="https://maps.google.com/maps?q=2A%20Guildhall%20Square%2C%20Portsmouth%20PO1%202DB&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="map-actions">
+        <a class="btn btn-primary"
+           href="https://www.google.com/maps/search/?api=1&query=2A%20Guildhall%20Square%2C%20Portsmouth%20PO1%202DB"
+           target="_blank" rel="noopener">
+          <span class="lang-zh">在 Google 地图中打开 ↗</span><span class="lang-en">Open in Google Maps ↗</span>
+        </a>
+        <a class="btn btn-ghost"
+           style="border-color:var(--cinnabar);color:var(--cinnabar);"
+           href="https://www.google.com/maps/dir/?api=1&destination=2A%20Guildhall%20Square%2C%20Portsmouth%20PO1%202DB"
+           target="_blank" rel="noopener">
+          <span class="lang-zh">获取路线导航 ↗</span><span class="lang-en">Get Directions ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="info-strip">
+        <div class="cell">
+          <div class="ico">🏮</div>
+          <h4><span class="lang-zh">地址</span><span class="lang-en">Address</span></h4>
+          <p>2A, Guildhall Square,<br />Portsmouth PO1 2DB</p>
+        </div>
+        <div class="cell">
+          <div class="ico">📞</div>
+          <h4><span class="lang-zh">电话</span><span class="lang-en">Phone</span></h4>
+          <p><a href="tel:+447455021149">07455 021149</a></p>
+        </div>
+        <div class="cell">
+          <div class="ico">🕑</div>
+          <h4><span class="lang-zh">营业时间</span><span class="lang-en">Hours</span></h4>
+          <p><span class="lang-zh">周一至周五 11:30–21:30</span><span class="lang-en">Mon–Fri 11:30–21:30</span></p>
+          <p><span class="lang-zh">周六 12:00–22:00</span><span class="lang-en">Sat 12:00–22:00</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="seal">美味庄园</div>
+    <p class="f-info">Mayfair Chinese Restaurant</p>
+    <p class="f-info">2A, Guildhall Square, Portsmouth PO1 2DB</p>
+    <p class="f-info"><span class="lang-zh">电话 </span><span class="lang-en">Tel </span><a href="tel:+447455021149">07455 021149</a></p>
+    <p class="copy">© MMXXVI Mayfair Restaurant Ltd. · <span class="lang-zh">版权所有</span><span class="lang-en">All rights reserved</span></p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

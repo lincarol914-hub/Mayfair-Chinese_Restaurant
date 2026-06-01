@@ -2,6 +2,33 @@
 (function () {
   var KEY = "mayfair-lang";
 
+  // ---- 应用站点配置 / apply SITE_CONFIG (template) ----
+  var CFG = window.SITE_CONFIG;
+  if (CFG) {
+    // 主题色 theme colors -> CSS variables
+    var t = CFG.theme || {};
+    var root = document.documentElement.style;
+    if (t.accent) root.setProperty("--accent", t.accent);
+    if (t.wine)   root.setProperty("--wine", t.wine);
+    if (t.wine2)  root.setProperty("--wine-2", t.wine2);
+    if (t.ink)    root.setProperty("--ink", t.ink);
+
+    // 拨号链接 tel: links
+    if (CFG.phone && CFG.phone.dial) {
+      document.querySelectorAll('a[href^="tel:"]').forEach(function (a) {
+        a.setAttribute("href", "tel:" + CFG.phone.dial);
+      });
+    }
+    // data-cfg 占位元素：data-cfg-zh / data-cfg-en 文本注入（可选，模板用）
+    document.querySelectorAll("[data-cfg]").forEach(function (el) {
+      try {
+        var path = el.getAttribute("data-cfg").split(".");
+        var v = CFG; path.forEach(function (k) { v = v[k]; });
+        if (v != null) el.textContent = v;
+      } catch (e) {}
+    });
+  }
+
   function apply(lang) {
     var en = lang === "en";
     document.body.classList.toggle("is-en", en);
